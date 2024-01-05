@@ -39,7 +39,7 @@ async def get_datastore() -> DataStore:
         case "azurecosmosdb":
             from datastore.providers.azurecosmosdb_datastore import AzureCosmosDBDataStore
 
-            return await AzureCosmosDBDataStore.create()
+            return await AzureCosmosDBDataStore.create(1, "COS")
         case "qdrant":
             from datastore.providers.qdrant_datastore import QdrantDataStore
 
